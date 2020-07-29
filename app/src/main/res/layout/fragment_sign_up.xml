@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp">
+
+        <ImageView
+            android:id="@+id/icSignUp"
+            android:layout_width="172dp"
+            android:layout_height="172dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/ic_messenger"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtNameSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icSignUp" />
+
+        <EditText
+            android:id="@+id/txtEmailSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/phoneEmail"
+            android:inputType="textEmailAddress"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtNameSignUp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtNameSignUp"
+            app:layout_constraintTop_toBottomOf="@+id/txtNameSignUp" />
+
+        <EditText
+            android:id="@+id/txtPasswordSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtEmailSignUp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtEmailSignUp"
+            app:layout_constraintTop_toBottomOf="@+id/txtEmailSignUp" />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/btn_bg"
+            android:enabled="false"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/status_text_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtPasswordSignUp"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="@+id/txtPasswordSignUp"
+            app:layout_constraintTop_toBottomOf="@+id/txtPasswordSignUp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

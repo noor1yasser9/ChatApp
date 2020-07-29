@@ -1,0 +1,1 @@
+package com.example.nurbk.ps.chatapp.modelimport java.util.*data class TextMessage(    val text: String,    val senderId: String,    val recipientId: String,    val date: Date,    val type: String,    val senderName: String,    val recipientName: String){    constructor() : this(        "", "",        "",  Date(0),"", "", ""    )}

@@ -1,0 +1,1 @@
+package com.example.nurbk.ps.chatapp.repositoryimport com.example.nurbk.ps.chatapp.model.Userimport com.example.nurbk.ps.chatapp.unit.Constantsclass AuthActivityRepository {    fun insetUser(user: User) =        Constants.nameCollection(Constants.COLLECTION_USERS)            .document(user.uid!!).set(user)}

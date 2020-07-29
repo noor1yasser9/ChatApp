@@ -1,0 +1,1 @@
+package com.example.nurbk.ps.chatapp.modelobject MessageType {    const val TEXT="TEXT"    const val IMAGE="IMAGE"}

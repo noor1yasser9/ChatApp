@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcChatsGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/addImageGroup"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/et_genre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Group Name"
+        android:inputType="textPersonName" />
+
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Save" />
+
+</LinearLayout>

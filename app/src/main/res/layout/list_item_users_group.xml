@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="50dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgUserChatG"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/nameUserChatG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imgUserChatG"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/imgUserChatG"
+        app:layout_constraintTop_toBottomOf="@+id/imgUserChatG"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@tools:sample/full_names" />
+
+    <ToggleButton
+        android:id="@+id/btnSelect"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_btn_interests"
+        android:checked="false"
+        android:elevation="20dp"
+        android:textOff=" "
+        android:textOn=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

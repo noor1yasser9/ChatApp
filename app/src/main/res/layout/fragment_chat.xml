@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reChatMessage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/materialTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:reverseLayout="true" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnSendImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/ic_image"
+            android:tint="@color/colorPrimaryDark"
+            app:backgroundTint="#2196F3"
+            app:fabSize="mini" />
+
+        <EditText
+            android:id="@+id/txtChatSend"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="7dp"
+            android:layout_toEndOf="@+id/btnSendImage"
+            android:background="@drawable/bg_search_edit_text"
+            android:hint="Enter Your Message"
+            android:inputType="textMultiLine"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="50dp"
+            android:paddingBottom="5dp" />
+
+        <ImageView
+            android:id="@+id/btnChatSend"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/txtChatSend"
+            android:layout_alignEnd="@+id/txtChatSend"
+            android:layout_alignBottom="@+id/txtChatSend"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_send" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="typing..."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.eyalbira.loadingdots.LoadingDots
+        android:id="@+id/txtLoading"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+
+        android:visibility="visible"
+
+        app:LoadingDots_auto_play="true"
+        app:LoadingDots_dots_color="@android:color/holo_blue_light"
+        app:LoadingDots_dots_count="4"
+        app:LoadingDots_dots_size="19dp"
+        app:LoadingDots_dots_space="1dp"
+        app:LoadingDots_jump_duration="200"
+        app:LoadingDots_jump_height="7dp"
+
+        app:LoadingDots_loop_duration="800"
+        app:LoadingDots_loop_start_delay="100"
+        app:layout_constraintBottom_toBottomOf="@+id/reChatMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/reChatMessage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
